@@ -1,0 +1,108 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navbar using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Main Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Content 3x wider than sidebar */
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    background: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+.sidebar {
+    background: #e7e7e7;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+/* Cards Section using Flexbox */
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    flex: 1 1 200px; /* Grow and shrink with a minimum width */
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #eee;
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Responsive Design with Media Queries */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .main-grid {
+        grid-template-columns: 1fr; /* Stack content and sidebar */
+    }
+    .cards-section {
+        flex-direction: column; /* Stack cards vertically */
+    }
+}
